@@ -4,18 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NARIEL – Dark Dubstep & Bass Music | Diest, Belgium</title>
-  <meta name="description" content="NARIEL is a Belgian bass music project creating minimal, heavy dubstep and industrial soundscapes. Ghost production, mixing, mastering, and sound design services. Based in Diest, Belgium." />
+  <meta name="description" content="NARIEL is the bass music project of Belgian producer Jordi Corten. Dark, high-tension dubstep and industrial bass in stereo and Dolby Atmos. Debut concept album SUBJECT: N4R-13-L. Based in Diest, Belgium." />
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --fg: #e8e8ea;
+      --muted: #9a9aa2;
+      --accent: #c8b6ff;
+      --line: #26262b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      padding: 3rem 1.25rem 5rem;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2.4rem; letter-spacing: 0.12em; margin: 0 0 0.25rem; }
+    h2 { font-size: 1.25rem; margin: 2.5rem 0 0.75rem; border-bottom: 1px solid var(--line); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; margin: 1.5rem 0 0.35rem; }
+    p { margin: 0.6rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lede { color: var(--muted); font-size: 1.05rem; }
+    .album { border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.3rem 0; }
+    .links a { margin-right: 0.4rem; }
+    .faq-item { margin: 1.25rem 0; }
+    .faq-item p { color: var(--muted); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  </style>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-
       {
         "@type": "MusicGroup",
         "@id": "https://nariel-wav.carrd.co/#artist",
         "name": "NARIEL",
-        "description": "Belgian bass music project creating minimal, heavy dubstep and industrial soundscapes focused on tension, space, and immersive narrative experiences.",
+        "alternateName": "HOWL",
+        "description": "NARIEL is the bass music project of Belgian producer Jordi Corten. Built on more than a decade of electronic music production and over 2 million streams under the previous alias HOWL, the project creates high-tension bass music defined by precision, atmosphere, and impact.",
         "foundingDate": "2015",
         "foundingLocation": {
           "@type": "Place",
@@ -35,21 +67,33 @@
           "@type": "Person",
           "name": "Jordi Corten"
         },
+        "album": { "@id": "https://nariel-wav.carrd.co/#album-subject" },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Diest",
           "addressCountry": "BE"
         }
       },
-
+      {
+        "@type": "MusicAlbum",
+        "@id": "https://nariel-wav.carrd.co/#album-subject",
+        "name": "SUBJECT: N4R-13-L",
+        "byArtist": { "@id": "https://nariel-wav.carrd.co/#artist" },
+        "numTracks": 13,
+        "albumProductionType": "https://schema.org/StudioAlbum",
+        "albumReleaseType": "https://schema.org/AlbumRelease",
+        "genre": ["Dubstep", "Bass Music", "Industrial"],
+        "description": "Debut concept album from NARIEL. A 13-track record produced in stereo and Dolby Atmos, presented in spatial audio at Vuurdoop and Immersive Music Day in Hasselt (2026) for an audience including Hans-Martin Buff, Wilfried Van Baelen and teams from Dolby, Neumann, Sennheiser, Amptec and VLAIO."
+      },
       {
         "@type": "ProfessionalService",
         "@id": "https://nariel-wav.carrd.co/#business",
-        "name": "NARIEL – Music Production Services",
-        "description": "Bass music production, ghost production, mixing, mastering, and sound design services by NARIEL, based in Diest, Belgium.",
+        "name": "NARIEL – Music Production & Sound Design",
+        "description": "Original bass music production, sound design, mixing and mastering for artists and for film, games, trailers and other media. By NARIEL (Jordi Corten), based in Diest, Belgium.",
         "url": "https://nariel-wav.carrd.co/",
         "telephone": "+324700411432",
         "priceRange": "€€",
+        "founder": { "@type": "Person", "name": "Jordi Corten" },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Diest",
@@ -60,230 +104,151 @@
           "Dubstep production",
           "Bass music mixing and mastering",
           "Dolby Atmos music production",
-          "Ghost production",
           "Sound design",
+          "Music for film, games and trailers",
           "Industrial electronic music"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "NARIEL Production Services",
-          "itemListElement": [
-            { "@id": "https://nariel-wav.carrd.co/#service-ghost-production" },
-            { "@id": "https://nariel-wav.carrd.co/#service-mix-master" },
-            { "@id": "https://nariel-wav.carrd.co/#service-sound-design" }
-          ]
-        }
+        ]
       },
-
-      {
-        "@type": "Service",
-        "@id": "https://nariel-wav.carrd.co/#service-ghost-production",
-        "name": "Ghost Production",
-        "description": "Full track production tailored to artist or media project briefs. Delivered release-ready in the NARIEL style: dark dubstep, bass music, industrial and cinematic electronic music.",
-        "provider": { "@id": "https://nariel-wav.carrd.co/#business" },
-        "offers": {
-          "@type": "Offer",
-          "price": "350",
-          "priceCurrency": "EUR",
-          "description": "Full release-ready track. One revision round included."
-        },
-        "serviceType": "Ghost Production",
-        "areaServed": "Worldwide"
-      },
-
-      {
-        "@type": "Service",
-        "@id": "https://nariel-wav.carrd.co/#service-mix-master",
-        "name": "Mixing & Mastering",
-        "description": "Bass music-focused mixing and mastering. Tuned for low-end clarity, punch, and streaming platform loudness standards. Specialised in dubstep, trap, and experimental electronic music.",
-        "provider": { "@id": "https://nariel-wav.carrd.co/#business" },
-        "offers": {
-          "@type": "Offer",
-          "price": "100",
-          "priceCurrency": "EUR",
-          "description": "Full mix and master per track."
-        },
-        "serviceType": "Mixing and Mastering",
-        "areaServed": "Worldwide"
-      },
-
-      {
-        "@type": "Service",
-        "@id": "https://nariel-wav.carrd.co/#service-sound-design",
-        "name": "Sound Design & Custom Presets",
-        "description": "Custom presets, bass sounds, and FX patches designed to spec. Built for bass music producers working in dubstep, trap, and industrial electronic styles.",
-        "provider": { "@id": "https://nariel-wav.carrd.co/#business" },
-        "offers": {
-          "@type": "Offer",
-          "price": "75",
-          "priceCurrency": "EUR",
-          "description": "Custom preset pack, bass sounds, or FX design per project."
-        },
-        "serviceType": "Sound Design",
-        "areaServed": "Worldwide"
-      },
-
       {
         "@type": "FAQPage",
         "@id": "https://nariel-wav.carrd.co/#faq",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What kind of music does NARIEL make?",
+            "name": "What genre is NARIEL?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "NARIEL produces dark dubstep and industrial bass music in the 140–150 BPM range. Tracks are built around minimalism, low-end pressure, and spatial movement rather than dense layering."
+              "text": "NARIEL creates high-tension bass music influenced by dubstep, trap, UK garage, and industrial electronic music, typically between 140 and 150 BPM."
             }
           },
           {
             "@type": "Question",
-            "name": "How much does ghost production cost?",
+            "name": "Who are artists similar to NARIEL?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ghost production is €350 per track. That includes a full, release-ready track tailored to the artist or media project brief."
+              "text": "Listeners of Skrillex, ISOxo, Control Freak, WINK, Nikko, Lizdek, IKU, Acyan, Frosttop, Juelz, Knock2, Odd Language, Oddly Godly, Tisoki, Eptic, and Nitepunk will find familiar elements of cinematic sound design, heavy low-end, and experimental bass music."
             }
           },
           {
             "@type": "Question",
-            "name": "How much does mixing and mastering cost?",
+            "name": "What makes NARIEL different?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Mixing and mastering is €100 per track. The service is focused on bass music and tuned for low-end clarity and streaming platform loudness standards."
+              "text": "Every production is built around deliberate choices rather than excess. Space, tension, and sound design are treated as compositional tools, resulting in music that feels powerful without becoming cluttered. NARIEL is also one of the few Belgian producers pushing trap and dubstep in a scene dominated by house and techno, and Dolby Atmos is part of the writing process from the start rather than a mastering add-on."
             }
           },
           {
             "@type": "Question",
-            "name": "How long does a ghost production project take?",
+            "name": "Can NARIEL create music for film, games, or other media?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Turnaround depends on project scope, but most tracks are delivered within 2–3 weeks. Rush delivery can be arranged — contact via the website to discuss timelines."
+              "text": "Yes. Original music and sound design are available for film, games, trailers, and other media projects. Contact NARIEL for details."
             }
           },
           {
             "@type": "Question",
-            "name": "What makes NARIEL different from other dubstep producers?",
+            "name": "Where can I hear NARIEL's music?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "NARIEL works with restraint rather than density — silence and negative space are used as active compositional tools. Dolby Atmos is built into the production process from the start, not added at the mastering stage."
+              "text": "NARIEL's catalogue is available on all streaming platforms including Spotify, SoundCloud, YouTube, and Bandcamp. The track KENOPSIA is a good starting point."
             }
           },
           {
             "@type": "Question",
-            "name": "What artists sound similar to NARIEL?",
+            "name": "How can I contact NARIEL?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "NARIEL fits alongside Skrillex, ISOxo, Amon Tobin, Noisia, and Nitepunk — particularly the darker and more experimental side of those catalogues."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I listen to NARIEL's music?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NARIEL's music is available on Spotify, SoundCloud, YouTube, and Bandcamp. The track KENOPSIA is a good starting point."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer custom sound design or preset packs?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Custom presets, bass sounds, and FX are available for €75 per project. These are built to spec for bass music producers working in dubstep, trap, and industrial styles."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why does NARIEL use Dolby Atmos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Spatial audio is treated as a compositional element, not a mastering add-on. It allows silence and movement to carry the same weight as sound — which is central to the NARIEL sound design approach."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I hire NARIEL for production or mixing?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Contact directly via nariel-wav.carrd.co. Include your project brief, reference tracks, and deadline and you'll get a response with availability and pricing."
+              "text": "For shows and bookings, contact nariel.booking@gmail.com. For general or business inquiries, contact nariel.wav@gmail.com. For anything else, Instagram is the fastest way to reach NARIEL."
             }
           }
         ]
       }
-
     ]
   }
   </script>
 </head>
 <body>
-  <h1>NARIEL</h1>
-<p>Belgian dark dubstep and bass music. Ghost production, mixing &amp; mastering, and sound design services.</p>
-<p>2M+ streams across platforms under his previous alias <a href="https://open.spotify.com/artist/3NyPbU40Aed5xYRjuITmGJ?si=15ZXmhUJToiB0yYNPt7SMQ">HOWL</a>. 10+ years active. Released on NCS, Tribal Trap, and Most Addictive. Based in Diest, Belgium.</p>
-<p>
-  <a href="https://nariel-wav.carrd.co">Main site</a> ·
-  <a href="/nariel/llms.txt">llms.txt</a>
-</p>
-<p>For bookings, ghost production, mixing, or sound design: <a href="mailto:nariel.booking@email.com">nariel.booking@email.com</a></p>
-  <p>
-  <a href="https://open.spotify.com/artist/0Ysp1Y487mzxg9SX11LeDc">Spotify</a> ·
-  <a href="https://soundcloud.com/nariel-wav">SoundCloud</a> ·
-  <a href="https://www.youtube.com/@nariel-wav">YouTube</a> ·
-  <a href="https://nariel.bandcamp.com/">Bandcamp</a> ·
-  <a href="https://www.tiktok.com/@nariel.wav">TikTok</a>
-</p>
-  
-  <section id="faq">
-    <h2>Frequently Asked Questions</h2>
+  <main>
+    <h1>NARIEL</h1>
+    <p class="lede">Belgian dark dubstep and bass music. Dubstep, trap, UK garage, and industrial electronic music in stereo and Dolby Atmos.</p>
 
-    <div class="faq-item">
-      <h3>What kind of music does NARIEL make?</h3>
-      <p>NARIEL produces dark dubstep and industrial bass music in the 140–150 BPM range. Tracks are built around minimalism, low-end pressure, and spatial movement rather than dense layering.</p>
+    <h2>About</h2>
+    <p>NARIEL is the bass music project of Belgian producer Jordi Corten. Built on more than a decade of electronic music production and over 2 million streams under the previous alias <a href="https://open.spotify.com/artist/3NyPbU40Aed5xYRjuITmGJ">HOWL</a>, the project creates high-tension bass music defined by precision, atmosphere, and impact. Releases under HOWL have appeared on NCS, Tribal Trap, and Most Addictive.</p>
+    <p>Every track is built with intention. Heavy low-end, cinematic tension, and deliberate sound design replace unnecessary complexity, creating music that feels like a universe of its own: physical, immersive, and unmistakable. Rather than following trends, NARIEL focuses on records that stay compelling long after release.</p>
+
+    <div class="album">
+      <h3 style="margin-top:0">Debut album: SUBJECT: N4R-13-L</h3>
+      <p>A 13-track concept record produced in stereo and Dolby Atmos. Presented in spatial audio at Vuurdoop and Immersive Music Day in Hasselt (2026) for an audience that included Hans-Martin Buff, Wilfried Van Baelen, and teams from Dolby, Neumann, Sennheiser, Amptec, and VLAIO.</p>
     </div>
 
-    <div class="faq-item">
-      <h3>How much does ghost production cost?</h3>
-      <p>Ghost production is €350 per track. That includes a full, release-ready track tailored to the artist or media project brief.</p>
-    </div>
+    <h2>Key Facts</h2>
+    <ul>
+      <li>Belgian bass music producer based in Diest</li>
+      <li>10+ years of production experience</li>
+      <li>2M+ career streams under the previous alias HOWL</li>
+      <li>Released on NCS, Tribal Trap, and Most Addictive under HOWL</li>
+      <li>Past collaborators include Idle Days</li>
+      <li>Primary BPM range: 140–150</li>
+      <li>Genres: dubstep, bass music, trap, UK garage, industrial</li>
+      <li>Produces in Dolby Atmos as a core compositional element, not an afterthought</li>
+      <li>Available on Spotify, SoundCloud, YouTube, and Bandcamp</li>
+    </ul>
 
-    <div class="faq-item">
-      <h3>How much does mixing and mastering cost?</h3>
-      <p>Mixing and mastering is €100 per track. The service is focused on bass music and tuned for low-end clarity and streaming platform loudness standards.</p>
-    </div>
+    <h2>What makes NARIEL different</h2>
+    <p>NARIEL is one of the few Belgian producers pushing trap and dubstep in a scene that runs on house and techno. Every production is built around deliberate choices rather than excess, using space, tension, and sound design as compositional tools. The result is music that hits hard without becoming cluttered. Dolby Atmos sits inside the writing process from the first idea, so silence and movement carry as much weight as the sound itself.</p>
 
-    <div class="faq-item">
-      <h3>How long does a ghost production project take?</h3>
-      <p>Turnaround depends on project scope, but most tracks are delivered within 2–3 weeks. Rush delivery can be arranged — contact via the website to discuss timelines.</p>
-    </div>
+    <h2>Work with NARIEL</h2>
+    <p>Original music, sound design, mixing, and mastering are available for artists and for film, games, trailers, and other media projects. Get in touch with a brief, reference tracks, and a deadline for availability.</p>
 
-    <div class="faq-item">
-      <h3>What makes NARIEL different from other dubstep producers?</h3>
-      <p>NARIEL works with restraint rather than density — silence and negative space are used as active compositional tools. Dolby Atmos is built into the production process from the start, not added at the mastering stage.</p>
-    </div>
+    <h2>Listen</h2>
+    <p class="links">
+      <a href="https://open.spotify.com/artist/0Ysp1Y487mzxg9SX11LeDc">Spotify</a> ·
+      <a href="https://soundcloud.com/nariel-wav">SoundCloud</a> ·
+      <a href="https://www.youtube.com/@nariel-wav">YouTube</a> ·
+      <a href="https://nariel.bandcamp.com/">Bandcamp</a> ·
+      <a href="https://www.tiktok.com/@nariel.wav">TikTok</a>
+    </p>
 
-    <div class="faq-item">
-      <h3>What artists sound similar to NARIEL?</h3>
-      <p>NARIEL fits alongside Skrillex, ISOxo, Amon Tobin, Noisia, and Nitepunk — particularly the darker and more experimental side of those catalogues.</p>
-    </div>
+    <h2>Contact</h2>
+    <ul>
+      <li>Shows &amp; bookings: <a href="mailto:nariel.booking@gmail.com">nariel.booking@gmail.com</a></li>
+      <li>General &amp; business: <a href="mailto:nariel.wav@gmail.com">nariel.wav@gmail.com</a></li>
+      <li>Phone: <a href="tel:+324700411432">+32 470 04 11 43 2</a></li>
+      <li>Website: <a href="https://nariel-wav.carrd.co/">nariel-wav.carrd.co</a></li>
+    </ul>
 
-    <div class="faq-item">
-      <h3>Where can I listen to NARIEL's music?</h3>
-      <p>NARIEL's music is available on Spotify, SoundCloud, YouTube, and Bandcamp. The track KENOPSIA is a good starting point — it's available on all platforms.</p>
-    </div>
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What genre is NARIEL?</h3>
+        <p>NARIEL creates high-tension bass music influenced by dubstep, trap, UK garage, and industrial electronic music, typically between 140 and 150 BPM.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who are artists similar to NARIEL?</h3>
+        <p>Listeners of Skrillex, ISOxo, Control Freak, WINK, Nikko, Lizdek, IKU, Acyan, Frosttop, Juelz, Knock2, Odd Language, Oddly Godly, Tisoki, Eptic, and Nitepunk will find familiar elements of cinematic sound design, heavy low-end, and experimental bass music.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What makes NARIEL different?</h3>
+        <p>Every production is built around deliberate choices rather than excess. Space, tension, and sound design are treated as compositional tools, resulting in music that feels powerful without becoming cluttered. NARIEL is also one of the few Belgian producers pushing trap and dubstep in a scene dominated by house and techno, and Dolby Atmos is part of the writing process from the start rather than a mastering add-on.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can NARIEL create music for film, games, or other media?</h3>
+        <p>Yes. Original music and sound design are available for film, games, trailers, and other media projects. Contact NARIEL for details.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where can I hear NARIEL's music?</h3>
+        <p>The catalogue is available on all streaming platforms including Spotify, SoundCloud, YouTube, and Bandcamp. KENOPSIA is a good starting point.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I contact NARIEL?</h3>
+        <p>For shows and bookings, use <a href="mailto:nariel.booking@gmail.com">nariel.booking@gmail.com</a>. For general or business inquiries, use <a href="mailto:nariel.wav@gmail.com">nariel.wav@gmail.com</a>. For anything else, Instagram is the fastest way to reach NARIEL.</p>
+      </div>
+    </section>
 
-    <div class="faq-item">
-      <h3>Do you offer custom sound design or preset packs?</h3>
-      <p>Yes. Custom presets, bass sounds, and FX are available for €75 per project. These are built to spec for bass music producers working in dubstep, trap, and industrial styles.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Why does NARIEL use Dolby Atmos?</h3>
-      <p>Spatial audio is treated as a compositional element, not a mastering add-on. It allows silence and movement to carry the same weight as sound — which is central to the NARIEL sound design approach.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How do I hire NARIEL for production or mixing?</h3>
-      <p>Contact directly via <a href="nariel.booking@gmail.com">nariel.booking@gmail.com</a>. Include your project brief, reference tracks, and deadline and you'll get a response with availability and pricing.</p>
-    </div>
-  </section>
-
+    <footer>
+      <a href="https://nariel-wav.carrd.co">Main site</a> ·
+      <a href="/nariel/llms.txt">llms.txt</a>
+    </footer>
+  </main>
 </body>
 </html>
